@@ -1,7 +1,7 @@
 {
   "name": "generator-customelement",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
+  "version": "0.0.1",
+  "description": "Scaffolding a Polymer custom element the right way.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "karan/generator-customelement",
@@ -10,25 +10,16 @@
     "email": "karan@goel.im",
     "url": "https://github.com/karan"
   },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "files": [
-    "app"
-  ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "polymer",
+    "web-component",
+    "custom-element"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
     "chalk": "~0.4.0",
     "yosay": "^0.1.0"
-  },
-  "devDependencies": {
-    "mocha": "*"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
