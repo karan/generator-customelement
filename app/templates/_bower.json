@@ -1,6 +1,14 @@
 {
-  "name": "package",
+  "name": "seed-element",
   "version": "0.0.0",
-  "dependencies": {}
+  "keywords": [
+    "seed, 
+    polymer, 
+    web-components"
+  ],
+  "main": "seed-element.html",
+  "homepage": "https://github.com/PolymerLabs/seed-element/",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.4"
+  }
 }
-
