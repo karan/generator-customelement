@@ -3,22 +3,11 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
-var chalk = require('chalk');
 
 
 var CustomelementGenerator = yeoman.generators.Base.extend({
   init: function () {
-    // var elementDir = process.cwd() + '/' + this.elementName;
-    // process.chdir(elementDir);
-
-    // this.on('end', function () {
-    //   if (!this.options['skip-install']) {
-    //     this.installDependencies({
-    //       bower: true,
-    //       npm: false
-    //     });
-    //   }
-    // });
+    
   },
 
   askFor: function () {
@@ -63,6 +52,17 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
     this.template('_README.md', this.elementName + '/README.md');
     this.template('_seed-element.html', this.elementName + '/seed-element.html');
     this.template('_update_docs.sh', this.elementName + '/update_docs.sh');
+  },
+
+  installDependencies: function() {
+    this.log("installing stuff");
+    var done = this.async();
+    // process.chdir(this.elementName);
+    this.bowerInstall();
+  },
+
+  endEverything: function() {
+    this.log("Great! You are ready to go now.");
   }
 });
 
