@@ -1,22 +1,24 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <!--
-Element providing solution to no problem in particular.
+<%= elementDescription %> [**Live demo**](../<%= elementName %>/demo.html)
+
+<iframe src="http://ghbtns.com/github-btn.html?user=<%= githubUsername %>&repo=<%= elementName %>&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
 
 ##### Example
 
-    <seed-element></seed-element>
+    <<%= elementName %>></<%= elementName %>>
 
-@element seed-element
-@blurb Element providing solution to no problem in particular.
+@element <%= elementName %>
+@blurb <%= elementDescription %>
 @status alpha
-@homepage username.github.io/seed-element
+@homepage <%= githubUsername %>.github.io/<%= elementName %>
 -->
-<polymer-element name="seed-element" attributes="notitle">
+<polymer-element name="<%= elementName %>" attributes="notitle">
 
   <template>
 
-    <link rel="stylesheet" href="seed-element.css" />
+    <link rel="stylesheet" href="<%= elementName %>.css" />
 
     <content></content>
 
@@ -24,7 +26,7 @@ Element providing solution to no problem in particular.
 
   <script>
 
-    Polymer('seed-element', {
+    Polymer('<%= elementName %>', {
       /**
        * The `noevent` event is not actually fired from here,
        * we document it as an example of documenting events.

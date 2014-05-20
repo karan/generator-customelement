@@ -1,13 +1,13 @@
 {
-  "name": "seed-element",
+  "name": "<%= elementName %>",
+  "description": "<%= elementDescription %>",
   "version": "0.0.0",
   "keywords": [
-    "seed, 
-    polymer, 
-    web-components"
+    "polymer",
+    "web-components"
   ],
-  "main": "seed-element.html",
-  "homepage": "https://github.com/PolymerLabs/seed-element/",
+  "main": "<%= elementName %>.html",
+  "homepage": "https://github.com/<%= githubUsername %>/<%= elementName %>/",
   "dependencies": {
     "polymer": "Polymer/polymer#~0.2.4"
   }

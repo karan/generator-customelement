@@ -24,12 +24,21 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
     this.log(yosay('Welcome to the marvelous Customelement generator!'));
 
     var prompts = [{
+      name: 'githubUsername',
+      message: 'What is your Github username?',
+      default: ''
+    }, {
       name: 'elementName',
       message: 'What would you like to call your element?'
+    }, {
+      name: 'elementDescription',
+      message: 'What does your element do?'
     }];
 
     this.prompt(prompts, function (props) {
       this.elementName = props.elementName;
+      this.githubUsername = props.githubUsername;
+      this.elementDescription = props.elementDescription;
 
       done();
     }.bind(this));

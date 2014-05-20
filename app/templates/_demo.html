@@ -2,17 +2,17 @@
 <html>
 <head>
 
-  <title>seed-element Demo</title>
+  <title><%= elementName %> Demo</title>
 
   <script src="../platform/platform.js"></script>
-  <link rel="import" href="seed-element.html">
+  <link rel="import" href="<%= elementName %>.html">
 
 </head>
 <body unresolved>
 
-  <p>An example of using <code>&lt;seed-element></code>:</p>
+  <p>An example of using <code>&lt;<%= elementName %>></code>:</p>
 
-  <seed-element></seed-element>
+  <<%= elementName %>></<%= elementName %>>
 
 </body>
 </html>

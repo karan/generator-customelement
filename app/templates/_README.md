@@ -1,8 +1,36 @@
-seed-element
+<%= elementName %>
 ================
 
-See the [component page](http://polymerlabs.github.io/seed-element) for more information.
+\<<%= elementName %>\>
+================
 
-## Getting Started
+The meme element for modern web
 
-We've put together a [guide to seed-element](http://www.polymer-project.org/docs/start/reusableelements.html) to help get you rolling.
+| [Documentation](http://karan.github.io/<%= elementName %>/) | [Live demo](http://karan.github.io/<%= elementName %>/components/<%= elementName %>/demo.html) |
+| --- | --- |
+
+## Install
+
+### Method 1 - bower
+
+    bower install <%= elementName %>
+
+### Method 2 - Polymer
+
+1. Import Web Components' polyfill:
+
+  ```xml
+  <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.2.4/platform.js"></script>
+  ```
+
+2. Import Custom Element:
+
+  ```xml
+  <link rel="import" href="<%= elementName %>.html">
+  ```
+
+3. Start using it!
+
+  ```xml
+  <<%= elementName %>></<%= elementName %>>
+  ```
