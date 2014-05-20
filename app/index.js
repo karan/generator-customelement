@@ -41,12 +41,13 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
 
   projectfiles: function () {
     this.copy('bowerrc', '.bowerrc');
-    this.copy('_bower.json', 'bower.json');
-    this.copy('_demo.html', 'demo.html');
-    this.copy('_index.html', 'index.html');
-    this.copy('_README.md', 'README.md');
     this.copy('_seed-emelent.css', 'seed-emelent.css');
-    this.copy('_seed-emelent.html', 'seed-emelent.html');
+    this.copy('_index.html', 'index.html');
+
+    this.template('_bower.json', 'bower.json');
+    this.template('_demo.html', 'demo.html');
+    this.template('_README.md', 'README.md');
+    this.template('_seed-emelent.html', 'seed-emelent.html');
   }
 });
 
