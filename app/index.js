@@ -1,4 +1,6 @@
 'use strict';
+
+var banner = require('../banner');
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
@@ -7,7 +9,9 @@ var yosay = require('yosay');
 
 var CustomelementGenerator = yeoman.generators.Base.extend({
   init: function () {
-    
+    if (!this.options['skip-install-message']) {
+        this.log(banner);
+    }
   },
 
   askFor: function () {
@@ -22,7 +26,8 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
       default: ''
     }, {
       name: 'elementName',
-      message: 'What would you like to call your element? (format: x-element, or element-name)'
+      message: 'What would you like to call your element? (format: x-element, or element-name)',
+      default: 'my-element'
     }, {
       name: 'elementDescription',
       message: 'What does your element do?'
@@ -59,11 +64,9 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
     var done = this.async();
     // TODO switch to element directory
     this.bowerInstall();
-  },
-
-  endEverything: function() {
-    this.log("Great! You are ready to go now.");
   }
+
+  // Add custom message to say goodbye
 });
 
 module.exports = CustomelementGenerator;
