@@ -29,7 +29,7 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
       default: ''
     }, {
       name: 'elementName',
-      message: 'What would you like to call your element?'
+      message: 'What would you like to call your element? (format: x-element, or element-name)'
     }, {
       name: 'elementDescription',
       message: 'What does your element do?'
@@ -49,14 +49,14 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
   },
 
   projectfiles: function () {
-    this.copy('bowerrc', '.bowerrc');
-    this.copy('_seed-emelent.css', 'seed-emelent.css');
-    this.copy('_index.html', 'index.html');
+    this.copy('_bowerrc', '.bowerrc');
+    this.copy('_seed-element.css', this.elementName + '/seed-element.css');
+    this.copy('_index.html', this.elementName + '/ndex.html');
 
-    this.template('_bower.json', 'bower.json');
-    this.template('_demo.html', 'demo.html');
-    this.template('_README.md', 'README.md');
-    this.template('_seed-emelent.html', 'seed-emelent.html');
+    this.template('_bower.json', this.elementName + '/bower.json');
+    this.template('_demo.html', this.elementName + '/demo.html');
+    this.template('_README.md', this.elementName + '/README.md');
+    this.template('_seed-element.html', this.elementName + '/seed-element.html');
   }
 });
 
