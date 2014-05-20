@@ -64,7 +64,7 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
     var elementDir = process.cwd() + '/' + this.elementName;
     process.chdir(elementDir);
     this.bowerInstall();
-  }
+  },
 
   // Add custom message to say goodbye
 });
