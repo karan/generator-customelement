@@ -22,7 +22,8 @@
   "dependencies": {
     "yeoman-generator": "~0.16.0",
     "yosay": "^0.1.0",
-    "process": "latest"
+    "process": "latest",
+    "chalk": "latest"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
