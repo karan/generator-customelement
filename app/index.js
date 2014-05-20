@@ -51,7 +51,7 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
   projectfiles: function () {
     this.copy('_bowerrc', '.bowerrc');
     this.copy('_seed-element.css', this.elementName + '/seed-element.css');
-    this.copy('_index.html', this.elementName + '/ndex.html');
+    this.copy('_index.html', this.elementName + '/index.html');
 
     this.template('_bower.json', this.elementName + '/bower.json');
     this.template('_demo.html', this.elementName + '/demo.html');
