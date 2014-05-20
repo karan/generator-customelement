@@ -8,20 +8,24 @@ var chalk = require('chalk');
 
 var CustomelementGenerator = yeoman.generators.Base.extend({
   init: function () {
-    this.pkg = require('../package.json');
+    // var elementDir = process.cwd() + '/' + this.elementName;
+    // process.chdir(elementDir);
 
-    this.on('end', function () {
-      if (!this.options['skip-install']) {
-        this.installDependencies();
-      }
-    });
+    // this.on('end', function () {
+    //   if (!this.options['skip-install']) {
+    //     this.installDependencies({
+    //       bower: true,
+    //       npm: false
+    //     });
+    //   }
+    // });
   },
 
   askFor: function () {
     var done = this.async();
 
     // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous Customelement generator!'));
+    this.log(yosay('Welcome to the Custom Element generator!'));
 
     var prompts = [{
       name: 'githubUsername',
