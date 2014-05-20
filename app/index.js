@@ -24,30 +24,29 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
     this.log(yosay('Welcome to the marvelous Customelement generator!'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      name: 'elementName',
+      message: 'What would you like to call your element?'
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.elementName = props.elementName;
 
       done();
     }.bind(this));
   },
 
   app: function () {
-    this.mkdir('app');
-    this.mkdir('app/templates');
-
-    this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
+    this.mkdir(this.elementName);
   },
 
   projectfiles: function () {
-    this.copy('editorconfig', '.editorconfig');
-    this.copy('jshintrc', '.jshintrc');
+    this.copy('bowerrc', '.bowerrc');
+    this.copy('_bower.json', 'bower.json');
+    this.copy('_demo.html', 'demo.html');
+    this.copy('_index.html', 'index.html');
+    this.copy('_README.md', 'README.md');
+    this.copy('_seed-emelent.css', 'seed-emelent.css');
+    this.copy('_seed-emelent.html', 'seed-emelent.html');
   }
 });
 
