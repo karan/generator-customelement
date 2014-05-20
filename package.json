@@ -2,13 +2,16 @@
   "name": "generator-customelement",
   "version": "0.0.1",
   "description": "Scaffolding a Polymer custom element the right way.",
+  "author": {
+    "name": "Karan Goel",
+    "url": "https://github.com/karan/generator-customelement",
+    "email": "karan@goel.im"
+  },
   "license": "MIT",
   "main": "app/index.js",
   "repository": "karan/generator-customelement",
-  "author": {
-    "name": "Karan Goel",
-    "email": "karan@goel.im",
-    "url": "https://github.com/karan"
+  "engines": {
+    "node": ">=0.10.0"
   },
   "keywords": [
     "yeoman-generator",
