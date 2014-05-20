@@ -2,7 +2,7 @@
 
 Scaffolding a Polymer custom element the right way - based on official [Creating reusable elements](http://www.polymer-project.org/docs/start/reusableelements.html) guide.
 
-![](http://i.imgur.com/CHpEyTq.png)
+![](http://i.imgur.com/zYCmQ14.png)
 
 To install generator-customelement from npm, run:
 
