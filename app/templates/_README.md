@@ -3,7 +3,7 @@
 
 The meme element for modern web
 
-| [Documentation](http://karan.github.io/<%= elementName %>/) | [Live demo](http://karan.github.io/<%= elementName %>/components/<%= elementName %>/demo.html) |
+| [Documentation](http://<%= githubUsername %>.github.io/<%= elementName %>/) | [Live demo](http://<%= githubUsername %>.github.io/<%= elementName %>/components/<%= elementName %>/demo.html) |
 | --- | --- |
 
 ## Install
