@@ -1,6 +1,6 @@
 {
   "name": "generator-customelement",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Scaffolding a Polymer custom element the right way.",
   "author": {
     "name": "Karan Goel",
