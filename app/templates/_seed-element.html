@@ -12,14 +12,15 @@
 @element <%= elementName %>
 @blurb <%= elementDescription %>
 @status alpha
-@homepage <%= githubUsername %>.github.io/<%= elementName %>
+@homepage http://<%= githubUsername %>.github.io/<%= elementName %>
 -->
-<polymer-element name="<%= elementName %>" attributes="notitle">
+<polymer-element name="<%= elementName %>" attributes="notitle author">
 
   <template>
 
     <link rel="stylesheet" href="<%= elementName %>.css" />
-
+    
+    <h1>Hello from &lt;<%= elementName %>&gt;</h1>
     <content></content>
 
   </template>
@@ -28,39 +29,54 @@
 
     Polymer('<%= elementName %>', {
       /**
-       * The `noevent` event is not actually fired from here,
-       * we document it as an example of documenting events.
+       * The `author` attribute sets an initial author
        * 
-       * @event noevent
-       */
-
-      /**
-       * The `notitle` attribute does not yet have a purpose.
-       * 
-       * @attribute notitle
+       * @attribute author
        * @type string
        */
-      notitle: '',
+      author: '<%= githubUsername %>',
       
       /**
-       * The `aProp` is a property that does something cool.
+       * `fancy` is a property that does something fancy.
        * 
-       * @property aProp
+       * @property fancy
        * @type bool
        */
-      aProp: false,
+      fancy: false,
 
       ready: function() {
+        // Ready is a lifecycle callback.
+        // You can do setup work in here.
+        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
       },
 
       /**
-       * The `task` method does no work at this time.
+       * The `sayHello` method will return a greeting
        * 
-       * @method task
-       * @return {Object} Returns undefined.
-       * @param {String} dummy Serves no purpose today.
+       * @method sayHello
+       * @return {String} Returns a string greeting.
+       * @param {String} greeting Pass in a specific greeting
        */
-      task: function(dummy) {
+      sayHello: function(greeting) {
+        var response = greeting || 'Hello World!';
+        return '<%= elementName %> says, ' + response;
+      },
+
+      /**
+       * The `<%= elementName %>-lasers-success` event is fired whenever we
+       * call fireLasers.
+       * 
+       * @event <%= elementName %>-lasers-success
+       */
+
+      /**
+       * The `fireLasers` method will fire the lasers. At least
+       * it will dispatch an event that claims lasers were fired :)
+       * 
+       * @method fireLasers
+       */
+      fireLasers: function() {
+        this.fire('<%= elementName %>-lasers-success', { sound: 'Pew pew pew!' });
       }
 
     });

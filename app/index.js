@@ -57,6 +57,11 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
     this.template('_README.md', this.elementName + '/README.md');
     this.template('_seed-element.html', this.elementName + '/' + this.elementName + '.html');
     this.template('_update_docs.sh', this.elementName + '/update_docs.sh');
+
+    this.copy('tests/runner.html', this.elementName + '/tests/runner.html');
+    this.template('tests/seed-element-basic.html', this.elementName + '/tests/' + this.elementName + '-basic.html');
+    this.template('tests/tests.html', this.elementName + '/tests/tests.html');
+    this.directory('tests/tools', this.elementName + '/tests/tools');
   },
 
   installDependencies: function() {

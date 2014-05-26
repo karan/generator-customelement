@@ -8,7 +8,12 @@
   ],
   "main": "<%= elementName %>.html",
   "homepage": "https://github.com/<%= githubUsername %>/<%= elementName %>/",
+  "ignore": [
+    "**/.*"
+  ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.2.4"
+    "polymer": "Polymer/polymer#~0.2.4",
+    "chai": "~1.9.1",
+    "mocha": "~1.19.0"
   }
 }

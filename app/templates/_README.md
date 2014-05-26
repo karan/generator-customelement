@@ -10,7 +10,7 @@ The meme element for modern web
 
 ### Method 1 - bower
 
-    bower install <%= elementName %>
+    bower install <%= githubUsername %>/<%= elementName %>
 
 ### Method 2 - Polymer
 
