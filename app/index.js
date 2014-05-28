@@ -67,7 +67,12 @@ var CustomelementGenerator = yeoman.generators.Base.extend({
   installDependencies: function() {
     var done = this.async();
     var elementDir = process.cwd() + '/' + this.elementName;
-    process.chdir(elementDir);
+    try {
+      process.chdir(elementDir);
+    } catch (err) {
+      this.log("Could not change directory. `cd` into " + this.elementName + " and run `bower install`.")
+      process.exit(1);
+    }
     this.bowerInstall();
   },
 
