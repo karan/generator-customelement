@@ -2,17 +2,15 @@
   "name": "<%= elementName %>",
   "description": "<%= elementDescription %>",
   "version": "0.0.0",
-  "keywords": [
-    "polymer",
-    "web-components"
-  ],
+  "keywords": "polymer, web-components",
   "main": "<%= elementName %>.html",
+  "license": "MIT",
   "homepage": "https://github.com/<%= githubUsername %>/<%= elementName %>/",
   "ignore": [
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.2.4",
+    "polymer": "Polymer/polymer#~0.3.3",
     "chai": "~1.9.1",
     "mocha": "~1.19.0"
   }
